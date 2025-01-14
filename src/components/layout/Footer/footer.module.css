@@ -1,0 +1,21 @@
+.container{
+    display:flex;
+    justify-content: space-evenly;
+
+}
+
+.container>ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.footerLower{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+.footerLower span{
+    margin-right:5px;
+
+}
