@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Login | Airbnb",
+  title: "Airbnb",
   description: "Airbnb app",
 };
 

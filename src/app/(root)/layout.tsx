@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Airbnb",
+  title: "Airbnb | Home",
   description: "Airbnb get your room",
 };
 
@@ -27,7 +27,7 @@ export default function RootLayout({
       <>
         <Navbar/>
         <main>
-        {children}
+          {children}
         </main>
         <Footer/> 
       </>
