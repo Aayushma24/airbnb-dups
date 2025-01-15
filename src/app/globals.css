@@ -6,6 +6,9 @@
 }
 
 body{
-    overflow-x: hidden;
-    
+    overflow-x: hidden;   
+}
+
+main{
+    padding: 1rem;
 }
