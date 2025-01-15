@@ -1,0 +1,215 @@
+/* Main container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+  }
+  
+  /* Login box */
+  .loginBox {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Title */
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  
+  /* Error message */
+  .error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  /* Input group */
+  .inputGroup {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Label */
+  .label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  /* Input fields */
+  .input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 4px;
+    outline: none;
+  }
+  
+  .input:focus {
+    border-color: #007a87;
+    box-shadow: 0 0 4px rgba(0, 122, 135, 0.4);
+  }
+  
+  /* Submit button */
+  .submitButton {
+    width: 100%;
+    padding: 12px;
+    background-color: #007a87;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submitButton:hover {
+    background-color: #006a76;
+  }
+  
+  /* Footer */
+  .footer {
+    margin-top: 20px;
+  }
+  
+  .footerText {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .linkButton {
+    background: none;
+    border: none;
+    color: #007a87;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .linkButton:hover {
+    text-decoration: underline;
+  }
+  /* Main container to center the login box */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;  /* Airbnb light gray background */
+    font-family: 'Inter', sans-serif;  /* Airbnb font-family style */
+  }
+  
+  /* Login box with shadow and padding */
+  .loginBox {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;  /* Limit max width to look neat */
+  }
+  
+  /* Logo at the top */
+  .logo {
+    max-width: 120px;
+    margin-bottom: 20px;
+  }
+  
+  /* Title text */
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #222;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+  
+  /* Input group for label and input */
+  .inputGroup {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  /* Label styling */
+  .label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  /* Input field styling */
+  .input {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 4px;
+    outline: none;
+  }
+  
+  .input:focus {
+    border-color: #007a87;  /* Airbnb blue color */
+    box-shadow: 0 0 4px rgba(0, 122, 135, 0.4);
+  }
+  
+  /* Submit button styling */
+  .submitButton {
+    width: 100%;
+    padding: 14px;
+    background-color: #ff5a5f;  /* Airbnb's primary button color */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .submitButton:hover {
+    background-color: #e94e56;  /* Slightly darker red for hover */
+  }
+  
+  /* Footer section with a sign-up link */
+  .footer {
+    margin-top: 20px;
+  }
+  
+  .footerText {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .linkButton {
+    background: none;
+    border: none;
+    color: #007a87;  /* Airbnb's primary link color */
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .linkButton:hover {
+    text-decoration: underline;
+  }
+  
+    
