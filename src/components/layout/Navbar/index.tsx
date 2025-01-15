@@ -38,7 +38,12 @@ export default function Navbar() {
             <b>Who</b><span>Add guests</span>
           </div>
           </li>
+          <button className={styles.searchButton}>
+          <i className="fa-solid fa-magnifying-glass"></i>
+          </button>
         </ul>
+        
     </nav>
+    
   )
 }

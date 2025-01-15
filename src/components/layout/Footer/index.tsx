@@ -35,6 +35,7 @@ export default function Footer() {
         </div>
         <div className={styles.footerLower}>
             &copy;<span>{ new Date().getFullYear()}</span>{" "} Airbnb, Inc.
+            
         </div>
       
     </footer>

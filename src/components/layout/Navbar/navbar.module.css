@@ -55,7 +55,14 @@
     border-radius: 100px;
     color:gray;
     gap: 10px;
-    
-
-   
+      
+}
+.searchButton{
+    width:50px;
+    font-size: large;
+    height:50px;
+    border-radius :50%;
+    background-color:rgb(234, 56, 136);
+    border:none;
+    color:white;
 }
