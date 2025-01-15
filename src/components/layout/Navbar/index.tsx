@@ -5,6 +5,8 @@ import styles from "./navbar.module.css";
 import React, { useState, useRef, useEffect } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaCircleUser } from "react-icons/fa6";
+import { useRouter } from 'next/navigation';  // Import the useRouter hook
+import Link from "next/link";
 
 export default function Navbar() {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -13,6 +15,7 @@ export default function Navbar() {
     top: 0,
     left: 0,
   });
+  const router = useRouter();  // Initialize the router
 
   const toggleModal = () => {
     if (profileButtonRef.current) {
@@ -22,9 +25,19 @@ export default function Navbar() {
     setShowModal((prev) => !prev);
   };
 
+  const navigateToLogin = () => {
+    console.log("login")
+    router.push('/login');  // Navigate to the login page
+  };
+
+  const navigateToSignup = () => {
+    router.push('/signup');  // Navigate to the signup page
+  };
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (!profileButtonRef.current?.contains(event.target as Node)) {
+      // Close the modal if click is outside of the profile button or dialog
+      if (!profileButtonRef.current?.contains(event.target as Node) && !dialogRef.current?.contains(event.target as Node)) {
         setShowModal(false);
       }
     };
@@ -35,16 +48,21 @@ export default function Navbar() {
     };
   }, []);
 
+  // Create a ref for the dialog
+  const dialogRef = useRef<HTMLDivElement>(null);
+
   return (
     <nav className={styles.navbar}>
       <div className={styles["navbar--upper"]}>
-        <Image
+       <Link href={"/"}>
+       <Image
           width={100}
           height={100}
           src={"/logo.png"}
           alt="logo"
           className={styles.logo}
         />
+       </Link>
         <div>
           <ul className={styles.options}>
             <li>Stays</li>
@@ -61,7 +79,10 @@ export default function Navbar() {
         </button>
         {showModal && (
           <DialogList
+            ref={dialogRef}  // Pass the ref to the DialogList component
             style={{ top: dialogPosition.top, left: dialogPosition.left }}
+            onLoginClick={navigateToLogin}  
+            onSignupClick={navigateToSignup} 
           />
         )}
       </div>
@@ -95,19 +116,41 @@ export default function Navbar() {
   );
 }
 
-const DialogList = ({
-  style,
-}: {
+const DialogList = React.forwardRef<HTMLDivElement, {
   style: React.CSSProperties;
-}) => {
-  return (
+  onLoginClick: () => void;
+  onSignupClick: () => void;
+}>(({ style, onLoginClick, onSignupClick }, ref) => {
+  return (  
     <div className={styles.dialogOverlay}>
-      <div className={styles.dialog} style={style}>
+      <div
+        ref={ref}  // Attach the ref to the dialog div
+        className={styles.dialog}
+        style={style}
+        onClick={(e) => e.stopPropagation()}  // Prevent click propagation to close the modal
+      >
         <ul>
-          <li>Login</li>
-          <li>Signup</li>
+          <li
+            onClick={() => {
+              console.log("Login clicked");
+              onLoginClick();
+            }}
+          >
+            Login
+          </li>
+          <li
+            onClick={() => {
+              console.log("Signup clicked");
+              onSignupClick();
+            }}
+          >
+            Signup
+          </li>
         </ul>
       </div>
     </div>
   );
-};
+})
+
+DialogList.displayName = "DialogList";  // Necessary to display the ref
+
