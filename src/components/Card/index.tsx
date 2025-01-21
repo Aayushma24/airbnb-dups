@@ -1,8 +1,10 @@
 import React from 'react'
 import styles from "./card.module.css"
+import Link from 'next/link'
 
 export default function Card() {
   return (
+ <Link href={'/home'}>
   <div className={styles.card}>
       <div>
       <img className={styles.image}
@@ -23,5 +25,6 @@ export default function Card() {
         
     </div>
   </div>
+ </Link>
   )
 }
